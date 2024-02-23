@@ -471,31 +471,31 @@ section {
   opacity: 1;
   transform: scale(1);
 }
-
+/* 
 .blogs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
 }
-.blogs .blog {
+.blogs .blogs {
   position: relative;
   background-color: var(--color-grey-5);
   border-radius: 5px;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease-in-out;
 }
-.blogs .blog:hover {
+.blogs .blogs:hover {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-5px);
   transition: all 0.4s ease-in-out;
 }
-.blogs .blog:hover img {
+.blogs .blogs:hover img {
   filter: grayscale(0);
   transform: scale(1.1);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
 }
-.blogs .blog img {
+.blogs .blogs img {
   width: 100%;
   height: 300px;
   object-fit: cover;
@@ -504,25 +504,25 @@ section {
   filter: grayscale(100%);
   transition: all 0.4s ease-in-out;
 }
-.blogs .blog .blog-text {
+.blogs .blogs .blogs-text {
   margin-top: -7px;
   padding: 1.1rem;
   border-top: 8px solid var(--color-secondary);
 }
-.blogs .blog .blog-text h4 {
+.blogs .blogs .blogs-text h4 {
   font-size: 1.5rem;
   margin-bottom: 0.7rem;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
-.blogs .blog .blog-text h4:hover {
+.blogs .blogs .blogs-text h4:hover {
   color: var(--color-secondary);
 }
-.blogs .blog .blog-text p {
+.blogs .blogs .blogs-text p {
   color: var(--color-grey-2);
   line-height: 2rem;
   padding-bottom: 1rem;
-}
+} */
 
 .contact-content-con {
   display: flex;
@@ -690,6 +690,26 @@ section {
   font-size: 6.3rem;
 }
 
+.main-title h3 {
+  position: relative;
+  text-transform: lowercase;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.main-title h3 span {
+  color: var(--color-secondary);
+}
+.main-title h3 .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--color-grey-5);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  font-weight: 300;
+  font-size: 3rem;
+}
 .about-container .left-about p {
   padding-left: 0;
 }
@@ -827,6 +847,15 @@ section {
   .main-title h2 .bg-text {
     font-size: 2.3rem;
   }
+  .main-title h3 {
+    font-size: 1rem;
+  }
+  .main-title h3 span {
+    font-size: 1rem;
+  }
+  .main-title h3 .bg-text {
+    font-size: 1rem;
+  }
 }
 @media screen and (max-width: 1432px) {
   .container {
@@ -857,12 +886,12 @@ section {
   .main-title h2 .bg-text {
     font-size: 5.5rem;
   }
-}
+/* }
 @media screen and (max-width: 1250px) {
   .blogs {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 6rem;
-  }
+  } */
 
   .portfolios {
     grid-template-columns: repeat(2, 1fr);
@@ -871,11 +900,11 @@ section {
   .header-content .right-header {
     padding-right: 9rem;
   }
-}
+/* }
 @media screen and (max-width: 660px) {
   .blogs {
     grid-template-columns: repeat(1, 1fr);
-  }
+  } */
 
   .portfolios {
     grid-template-columns: repeat(1, 1fr);
@@ -897,6 +926,15 @@ section {
   }
   .main-title h2 .bg-text {
     font-size: 4.5rem;
+  }
+  .main-title h3 {
+    font-size: 1rem;
+  }
+  .main-title h3 span {
+    font-size: 1rem;
+  }
+  .main-title h3 .bg-text {
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 970px) {
@@ -950,15 +988,83 @@ section {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .main-title h2 {
+  .main-title h2,h3 {
     font-size: 3rem;
   }
-  .main-title h2 span {
+  .main-title h2,h3 span {
     font-size: 3rem;
   }
-  .main-title h2 .bg-text {
+  .main-title h2,h3 .bg-text {
     font-size: 4rem;
   }
 }
 
+
+.tt{
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  border: none;
+  color: var(--color-secondary);
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.tt span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.tt span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.tt:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 /*# sourceMappingURL=styles.css.map */
+
+
+.environment_li
+{
+  margin-top: 13px;
+}
+
+ 
+
+.environment_li h4
+{
+    border-bottom: 1px solid white;
+    padding: 8px;
+}
+
+ 
+
+.environment_li img
+{
+  border-radius: 25px;
+}
+
+ 
+
+.environment_li p
+{
+  margin-top:10px;
+}
+
